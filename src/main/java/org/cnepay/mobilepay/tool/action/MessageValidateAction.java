@@ -57,6 +57,9 @@ public class MessageValidateAction extends AbstractAction {
 		logger.info("加载短信验证码请求处理，该请求来自于：[" + request.getRemoteAddr() + ";" + request.getRemoteHost() + "]/user=" + request.getRemoteUser());
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("messagevalidatecode");
+		if(!StringUtils.isBlank(request.getParameter("checkbox"))){
+			modelAndView.addObject("checkbox","checked=\"checked\"");
+		}
 		int rows = 100;
 		if(NumberUtils.isNumber(rownum)){
 			rows = NumberUtils.toInt(rownum, 100);
@@ -81,6 +84,9 @@ public class MessageValidateAction extends AbstractAction {
 		int rows = 100;
 		if(NumberUtils.isNumber(rownum)){
 			rows = NumberUtils.toInt(rownum, 100);
+		}
+		if(!StringUtils.isBlank(request.getParameter("checkbox"))){
+			modelAndView.addObject("checkbox","checked=\"checked\"");
 		}
 		List<MessageValidateInfoEntity> entitys = this.messageValidateService.loadFactMessageValidateCode(String.valueOf(rows));
 		if(entitys == null || entitys.size() == 0){

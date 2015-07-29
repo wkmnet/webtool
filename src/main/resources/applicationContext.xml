@@ -91,8 +91,8 @@
         <property name="driverClassName"  
             value="oracle.jdbc.driver.OracleDriver" />   
         <property name="url"  
-            value="jdbc:oracle:thin:@192.168.1.16:1521:payment"/>   
-        <property name="username" value="dev_acq_v3" />   
-        <property name="password" value="dev_acq_v3" />   
+            value="jdbc:oracle:thin:@company.21er.net:8616:payment"/>   
+        <property name="username" value="acq_v3_dev" />   
+        <property name="password" value="acq_v3_dev" />   
     </bean> 
 </beans>

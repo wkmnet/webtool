@@ -18,7 +18,6 @@ public abstract class AbstractAction {
 	@Resource
 	public void setRequest(HttpServletRequest request) {
 		this.request = request;
-		
 	}
 
 	@Resource

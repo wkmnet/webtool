@@ -17,7 +17,7 @@ public class DataBase extends AbstractInitParams {
 //			System.out.println(map);
 //		}
 		
-		McrKsnDao dao = getApplicationContext().getBean(McrKsnDao.class);
+		McrKsnDao dao = (McrKsnDao)getApplicationContext().getBean(McrKsnDao.class.getName());
 		for(Map<String,Object> map : dao.loadKsn()){
 			System.out.println(map);
 		}

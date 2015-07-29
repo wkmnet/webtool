@@ -2,12 +2,11 @@ package org.cnepay.mobilepay.tool.action;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.cnepay.mobilepay.tool.service.MessageValidateService;
 import org.cnepay.mobilepay.tool.views.MessageValidateInfoEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,13 +17,13 @@ import org.springframework.web.servlet.view.RedirectView;
 @RequestMapping("/app")
 public class MessageValidateAction extends AbstractAction {
 	
+	@Autowired
 	private MessageValidateService messageValidateService = null;
 
 	public MessageValidateService getMessageValidateService() {
 		return messageValidateService;
 	}
 
-	@Resource
 	public void setMessageValidateService(
 			MessageValidateService messageValidateService) {
 		this.messageValidateService = messageValidateService;

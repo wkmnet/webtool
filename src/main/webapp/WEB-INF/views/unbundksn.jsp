@@ -38,6 +38,11 @@
 				</form>
 			</td>
 		</tr>
+		<tr style="text-align: left; COLOR: #0076C8; BACKGROUND-COLOR: #F4FAFF; font-weight: bold">
+			<td colspan="4">
+				<a href="<%=basePath%>validate/index.action" target="_blank">商户四审</a>
+			</td>
+		</tr>
 		<c:if test="${message != null }">
 		<tr style="text-align: center; COLOR: #0076C8; BACKGROUND-COLOR: #F4FAFF; font-weight: bold">
 			<td colspan="4"><c:out value="${message }"></c:out></td>

@@ -2,14 +2,13 @@ package org.cnepay.mobilepay.tool.action;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.cnepay.mobilepay.tool.service.AccountManageService;
 import org.cnepay.mobilepay.tool.service.KsnManageService;
 import org.cnepay.mobilepay.tool.views.KsnEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +26,7 @@ public class UnbundAction extends AbstractAction {
 		return accountManageService;
 	}
 
-	@Resource
+	@Autowired
 	public void setAccountManageService(AccountManageService accountManageService) {
 		this.accountManageService = accountManageService;
 	}
@@ -36,12 +35,13 @@ public class UnbundAction extends AbstractAction {
 		return ksnManageService;
 	}
 
-	@Resource
+	@Autowired
 	public void setKsnManageService(KsnManageService ksnManageService) {
 		this.ksnManageService = ksnManageService;
 	}
 
 	@RequestMapping("/scanKsn.action")
+//	@RequestMapping(value="/{abc}",method=RequestMethod.GET)
 	public ModelAndView scanKsn(@RequestParam(value="ksnNo",required=false,defaultValue="") String ksnNo){
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("unbundksn");

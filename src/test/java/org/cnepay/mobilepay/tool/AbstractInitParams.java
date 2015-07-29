@@ -1,16 +1,13 @@
 package org.cnepay.mobilepay.tool;
 
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@RunWith(SpringJUnit4ClassRunner.class)  //使用junit4进行测试 
-@ContextConfiguration({"/applicationContext.xml"}) //加载配置文件
+//@RunWith(SpringJUnit4ClassRunner.class)  //使用junit4进行测试 
+//@ContextConfiguration({"/applicationContext.xml"}) //加载配置文件
 public abstract class AbstractInitParams implements ApplicationContextAware{
 	
 	private static Logger logger = LoggerFactory.getLogger(AbstractInitParams.class);

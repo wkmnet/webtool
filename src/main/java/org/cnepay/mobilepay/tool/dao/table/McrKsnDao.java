@@ -64,7 +64,7 @@ public class McrKsnDao extends AbstractDao {
 		
 		public Boolean doInTransaction(TransactionStatus status) {
 			// TODO Auto-generated method stub
-			getJdbcTemplate().update("update mcr_ksn k set k.is_activated = 0,k.is_used = 0,k.terminal_id = '' where k.ksn_no = '" + ksnNo + "'");
+			getJdbcTemplate().update("update mcr_ksn k set k.is_activated = 0,k.is_used = 0,k.terminal_id = '',k.mac_address=null where k.ksn_no = '" + ksnNo + "'");
 			getJdbcTemplate().update("update mcr_serial_number s set s.is_used = 0,s.ksn_id=null,s.terminal_id=null where s.ksn_id = (select k.id from mcr_ksn k where k.ksn_no = '" + ksnNo + "')");
 			logger.info("isCompleted:" + status.isCompleted());
 			logger.info("isRollbackOnly:" + status.isRollbackOnly());

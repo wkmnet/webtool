@@ -40,7 +40,7 @@ public class UserValidateAction extends AbstractAction {
 
 	@RequestMapping("index.action")
 	public ModelAndView validate(HttpServletRequest request){
-		System.out.println(request.getRequestURI());
+		logger.info("request:" + request.getRequestURI());
 		return new ModelAndView("validate");
 	}
 	

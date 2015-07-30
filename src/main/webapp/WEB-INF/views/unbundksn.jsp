@@ -40,7 +40,16 @@
 		</tr>
 		<tr style="text-align: left; COLOR: #0076C8; BACKGROUND-COLOR: #F4FAFF; font-weight: bold">
 			<td colspan="4">
-				<a href="<%=basePath%>validate/index.action" target="_blank">商户四审</a>
+				<table id="main" border="0" cellpadding="3" cellspacing="1" width="100%" align="center" style="background-color: #b9d8f3;">
+				<tr style="text-align: center; COLOR: #0076C8; BACKGROUND-COLOR: #F4FAFF; font-weight: bold">
+					<td>
+						<a href="<%=basePath%>validate/index.action" target="_blank">商户四审</a>
+					</td>
+					<td>
+						<a href="<%=basePath%>bankcard/index.action" target="_blank">银行卡信息查询</a>
+					</td>
+				</tr>
+				</table>
 			</td>
 		</tr>
 		<c:if test="${message != null }">
